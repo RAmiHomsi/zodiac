@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(169, 169, 169, 0.5)), url('astronomical-clock-gc26a69c3c_1920.jpg');
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+
+html {scroll-behavior: smooth;}
+
+::-webkit-scrollbar {
+    width: 1rem;
+   }
+   
+  ::-webkit-scrollbar-track {
+    border: 7px solid #232943;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    }
+   
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #9e4673, #3d4a59);
+    border-radius: 1rem;
+  }
+   
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(270deg, #9e4673, #3d4a59, #9e4673);
+  }
+
+
+
+  .stroked-title { 
+    padding-top: 40px;
+    color:rgb(196, 191, 138);
+    font-size: 35px;
+    font-family: 'Space and Astronomy', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .rotate {
+    animation: rotation 20s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.wrapper1{
+    left: 6em;
+    top: 6em;
+    position: relative;
+    height: 55em;
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+header{
+    padding: 2em;
+    justify-content: space-between;
+    display: flex;
+    vertical-align: bottom;
+    margin-top: 2em;
+}
+nav{
+    width: auto;
+    height: 4em;
+    background-color: rgba(255, 0, 0, 0);
+   
+}
+
+a{
+  all: unset;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-family: 'Space and Astronomy', sans-serif;
+    font-size: 1em;
+    color:rgb(196, 191, 138);
+    
+
+}
+
+li{
+    padding-left: 2em;
+    transition: 700ms ease;
+}
+
+li:hover{
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+ul:has(li:hover) > li:not(:hover){
+  letter-spacing: 0px;
+}
+
+
+input{
+    border-bottom: 2px black solid;
+    padding-left:1em ;
+    box-sizing: border-box;
+    background: none;
+    font-weight: 400;
+    outline: 0;
+    font-size: 1.5em;
+    border-style: hidden;
+    
+    color: aliceblue;
+    width: 200px;
+}
+
+.hero-section{
+    width: 90%;
+    height: auto;
+    margin-top: 15rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.hero-text{
+    padding: 2em;
+    position: relative;
+    align-items:center;
+    top: -4em;
+    width: 35em;
+    margin-left: 5em;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+h1{
+    font-family: 'Sora', sans-serif;
+    color: aliceblue;
+}
+p{
+    font-family: 'Comfortaa', cursive;
+    color: aliceblue;
+
+}
+
+/*.btn1{
+    color: rgb(255, 78, 78);
+    font-size: 1.5em;
+    position: relative;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 25px;
+    border: solid 1px rgba(0, 204, 255, 0.747);
+    width: 22em;
+    height: 2em;
+    text-align: center;
+    padding-top: 19px;
+    font-family: 'Righteous', cursive;
+    
+}*/
+.hero-image{
+    position: relative;
+    bottom: 13em;
+    mix-blend-mode:hard-light    ;
+    left: 4em;
+}
+
+.bord{
+    position: relative;
+    width: 90%;
+    height: 55em;
+    left: 6em;
+    top: 15em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 25px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+   }
+ 
+   #square1{
+    width: 150px;
+    height: 150px;
+    background-image: url(capricorn-g2ddc33c19_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square2{
+    width: 150px;
+    height: 150px;
+    background-image: url(aquarius-g2d665e64f_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square3{
+    width: 150px;
+    height: 150px;
+    background-image: url(cancer-g5a47bb92a_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square4{
+    width: 150px;
+    height: 150px;
+    background-image: url(aries-g76d1220f0_1280-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square5{
+    width: 150px;
+    height: 150px;
+    background-image: url(gemini-g8de69ec2a_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square6{
+    width: 150px;
+    height: 150px;
+    background-image: url(leo-g40e44adfc_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+
+   #square7{
+    width: 150px;
+    height: 150px;
+    background-image: url(libra-gd7a033f72_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square8{
+    width: 150px;
+    height: 150px;
+    background-image: url(pisces-gd1fe67fa1_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square9{
+    width: 150px;
+    height: 150px;
+    background-image: url(sagittarius-ge1ef84613_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square10{
+    width: 150px;
+    height: 150px;
+    background-image: url(scorpio-g5c22e5a85_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square11{
+    width: 150px;
+    height: 150px;
+    background-image: url(taurus-gc7df4accf_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+   #square12{
+    width: 150px;
+    height: 150px;
+    background-image: url(virgo-g4b2a7043a_640-removebg-preview.png);
+    background-size:cover;
+    background-color: rgba(0, 0, 0);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 191, 138);
+    transition: 0.5s;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   }
+
+
+   .square:hover{
+    transform: translateY(-7px);
+}
+
+
+footer {
+  position: relative;
+  padding: 50px 0;
+  top: 35em;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+  }
